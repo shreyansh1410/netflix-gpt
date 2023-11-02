@@ -6,6 +6,10 @@
 - Routing of App
 - Login Form
 - Sign Up Form
+- Form Validation
+- useRef Hooks
+- Firebase Setup
+- Deploy app to production
 
 
 # Features
