@@ -13,6 +13,20 @@
 - Create signup user account
 - Implement sign out
 - Update profile
+- Bugfix: Sign up user display name and profile picture
+- Bugfix: If the user is not logged in, redirect to login page and vice versa
+- Unsubscribed to the onAuthStateChanged callback
+- Add hardcoded values to constants.js file
+- Register for TMDB API and create an app & get access token
+- Get data from TMDB now playing movies list API
+- Custom hook for now playing movies
+- Create movieSlice
+- Update store with movies data
+- planning for main and secondary container
+- fetch data for trailer video
+- update store with trailer video data
+- embedded the youtube video and make it autoplay on mute
+- added tailwind classes on mainContainer
 
 
 
