@@ -33,6 +33,9 @@
 - TMDB image cdn url
 - Tailwind in browse page
 - popular, upcoming, nowPlaying and topRated custom hooks
+- GPT Search Page
+- GPT Search Bar
+- (Bonus) Multi Language Support in GPT Seach Page
 
 
 

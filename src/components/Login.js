@@ -7,7 +7,7 @@ import { updateProfile } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 import { getAuth } from 'firebase/auth';
-import { USER_AVATAR } from '../utils/constants';
+import { BACKGROUND_IMG_URL, USER_AVATAR } from '../utils/constants';
 
 
 const Login = () => {
@@ -33,7 +33,7 @@ const Login = () => {
             createUserWithEmailAndPassword(getAuth(), email.current.value, password.current.value)
                 .then((userCredential) => {
                     // Signed up 
-                    const user = userCredential.user;   
+                    const user = userCredential.user;
                     updateProfile(user, {
                         displayName: name?.current?.value,
                         photoURL: USER_AVATAR
@@ -86,7 +86,7 @@ const Login = () => {
         <div>
             <Header />
             <div className=' w-full absolute brightness-50'>
-                <img src='https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_large.jpg' alt='background'></img>
+                <img src={BACKGROUND_IMG_URL} alt='background'></img>
             </div>
             <form onSubmit={(e) => { e.preventDefault() }} className='absolute text-white w-3/12 mx-auto left-0 right-0 my-48 p-12 bg-black bg-opacity-80'>
                 <h1 className='text-4xl font-semibold py-8'>{isSignedIn ? "Sign In" : "Sign Up"}</h1>
