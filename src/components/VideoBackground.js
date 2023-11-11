@@ -6,7 +6,7 @@ const VideoBackground = ({movieId}) => {
     useMovieTrailer(movieId);
     const videoTrailer = useSelector((store) => store.movies?.videoTrailer);
     return (
-        <div className='w-screen'>
+        <div className='w-screen pt-[50%] md:pt-0 bg-black'>
             <iframe
                 className='w-screen aspect-video'
                 src={"https://www.youtube-nocookie.com/embed/"+videoTrailer?.key+"?autoplay=1&mute=1&loop=1&amp;controls=0&playlist="+videoTrailer?.key}

@@ -6,10 +6,12 @@ const GptSearch = () => {
     return (
         <div>
             <div className="fixed -z-10">
-                <img src={BACKGROUND_IMG_URL} alt="backgroundImage " className="brightness-75" />
+                <img src={BACKGROUND_IMG_URL} alt="backgroundImage" className="brightness-50 object-cover h-screen w-screen"/>
             </div>
-            <GptSeachBar />
-            <GptMovieSuggestions />
+            <div>
+                <GptSeachBar />
+                <GptMovieSuggestions />
+            </div>
         </div>
     )
 }
