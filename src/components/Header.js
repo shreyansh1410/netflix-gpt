@@ -55,7 +55,7 @@ const Header = () => {
 
             }
         });
-        //Unsubscribe when component unmounts
+        //Unsubscribe from store when component unmounts
         return () => unsubscribe();
     }, [navigate, dispatch]);
 
