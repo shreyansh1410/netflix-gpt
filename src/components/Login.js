@@ -85,18 +85,19 @@ const Login = () => {
     return (
         <div>
             <Header />
-            <div className='w-full absolute brightness-50'>
-                <img src={BACKGROUND_IMG_URL} alt='background' className='h-screen w-screen object-cover'></img>
+            <div className='w-full h-full absolute brightness-50'>
+                <img src={BACKGROUND_IMG_URL} alt='background' className='max-h-screen w-screen object-cover'></img>
             </div>
-            <form onSubmit={(e) => { e.preventDefault() }} className='absolute text-white w-11/12 md:w-3/12 mx-auto left-0 right-0 my-48 p-12 bg-black bg-opacity-80'>
+            <form onSubmit={(e) => { e.preventDefault() }} className='absolute text-white h-[580px] w-11/12 md:w-3/12 mx-auto left-0 right-0 my-24 p-8 bg-black bg-opacity-80'>
                 <h1 className='text-4xl font-semibold py-8'>{isSignedIn ? "Sign In" : "Sign Up"}</h1>
                 {!isSignedIn && <input ref={name} type='text' placeholder='Full Name' className='p-4 my-2 w-full h-14 rounded-lg bg-gray-800' />}
                 <input ref={email} type='text' placeholder='Email Address' className='p-4 my-2 w-full h-14 rounded-lg bg-gray-800' />
                 <input ref={password} type='password' placeholder='Password' className='p-4 my-2 w-full h-14 rounded-lg bg-gray-800' />
+                <p className='cursor-pointer flex justify-center text-red-600 text-xs'>{errorMessage}</p>
                 <button className='bg-red-600 rounded-lg px-10 py-2 my-4 w-full font-semibold saturate-150' onClick={handleAuth}> {isSignedIn ? "Sign In" : "Sign Up"}</button>
-                <p className='cursor-pointer mb-10 my-2 flex justify-center'>{errorMessage}</p>
+
                 <p className='cursor-pointer font-bold mb-8 my-4' onClick={handleSignIn}>{isSignedIn ? "Don't have an account, Sign Up Now!" : "Already registered, Sign In now!"}</p>
-                <p className='cursor-pointer mb-8 my-6 flex justify-center'>&copy; Shreyansh Shukla</p>
+                <p className='cursor-pointer mb-8 my-4 flex justify-center'>&copy; Shreyansh Shukla</p>
             </form>
         </div>
     )
