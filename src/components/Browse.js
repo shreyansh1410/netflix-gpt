@@ -17,16 +17,26 @@ const Browse = () => {
   useTopRatedMovies();
   useUpcomingMovies();
   return (
-    <div>
-      <Header />
-      {showAiSearch ? ( // Updated condition
-        <GeminiSearch />
-      ) : (
-        <>
-          <MainContainer />
-          <SecondaryContainer />
-        </>
-      )}
+    <div className="flex flex-col min-h-screen">
+      <div className="flex-grow">
+        <Header />
+        {showAiSearch ? ( // Updated condition
+          <GeminiSearch />
+        ) : (
+          <>
+            <MainContainer />
+            <SecondaryContainer />
+          </>
+        )}
+      </div>
+      <footer className="bg-black text-gray-400 py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-center">
+            © {new Date().getFullYear()} Your Streaming Service. All rights
+            reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };

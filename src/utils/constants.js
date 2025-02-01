@@ -17,15 +17,15 @@ export const BACKGROUND_IMG_URL = 'https://assets.nflxext.com/ffe/siteui/vlv3/da
 export const SUPPORTED_LANGUAGES = [
   {
     identifier: 'en',
-    name: 'english',
+    name: 'English',
   },
   {
     identifier: 'hi',
-    name: 'hindi',
+    name: 'Hindi',
   },
   {
     identifier: 'es',
-    name: 'español',
+    name: 'Español',
   },
 ];;
 
