@@ -1,6 +1,9 @@
 import MovieCard from "./MovieCard";
 
 const MovieList = ({ title, movies }) => {
+  // Add check for null/undefined and ensure movies is an array
+  const movieArray = Array.isArray(movies) ? movies : [];
+
   return (
     <div className="px-6">
       <h1
@@ -11,8 +14,11 @@ const MovieList = ({ title, movies }) => {
       </h1>
       <div className="flex overflow-x-auto scrollbar-hide">
         <div className="flex">
-          {movies?.map((movie) => (
-            <MovieCard key={movie.id} posterPath={movie.poster_path} />
+          {movieArray?.map((movie) => (
+            <MovieCard
+              key={movie?.id || Math.random()}
+              posterPath={movie?.poster_path}
+            />
           ))}
         </div>
       </div>
