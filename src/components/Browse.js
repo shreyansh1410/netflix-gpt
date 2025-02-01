@@ -32,7 +32,7 @@ const Browse = () => {
       <footer className="bg-black text-gray-400 py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <p className="text-center">
-            © {new Date().getFullYear()} Your Streaming Service. All rights
+            © {new Date().getFullYear()} NetflixGPT. All rights
             reserved.
           </p>
         </div>
