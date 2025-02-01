@@ -1,18 +1,22 @@
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className="w-full aspect-video pt-[50%] md:pt-[10%] px-4 md:px-16 absolute text-white ">
-      {/* <p>Video Title</p> */}
-      <h1 className="text-2xl md:text-6xl font-bold mt-[5%] md:mt-0">
-        {title}
-      </h1>
-      <p className="hidden md:inline-block text-lg w-1/4 py-6">{overview}</p>
-      <div className="mx-0 md:mx-2 my-2">
-        <button className="bg-white text-xl py-1 md:py-4 px-4 md:px-12  text-black font-medium rounded-lg hover:opacity-80">
-          ▶️Play
-        </button>
-        <button className="hidden md:inline-block mx-2 bg-gray-500 text-xl p-4 px-12 text-white bg-opacity-50 rounded-lg hover:opacity-80">
-          More Info
-        </button>
+    <div className="absolute inset-0 z-20 flex flex-col justify-center px-4 md:px-16 pt-16 md:pt-0">
+      <div className="max-w-2xl">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          {title}
+        </h1>
+        <p className="hidden md:block text-lg text-gray-200 mb-8 line-clamp-3">
+          {overview}
+        </p>
+        <div className="flex gap-4">
+          <button className="flex items-center gap-2 bg-white hover:bg-gray-100 text-black px-8 py-3 rounded-lg font-medium transition-colors duration-200">
+            <span className="text-2xl">▶️</span>
+            Play
+          </button>
+          <button className="hidden md:flex items-center gap-2 bg-gray-600/80 hover:bg-gray-700/80 text-white px-8 py-3 rounded-lg font-medium backdrop-blur-sm transition-colors duration-200">
+            More Info
+          </button>
+        </div>
       </div>
     </div>
   );
